@@ -1,0 +1,28 @@
+center {
+	margin:0 auto; 
+	width:640px;
+	table-layout:fixed;
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+}
+
+.w640{
+	max-width:640px; 
+	margin: 0 auto;
+}
+
+.wrapper{
+	color:#3d3d3d;
+	font-size:16px;
+	line-height:19px;
+	font-family: 'Open Sans', sans-serif;
+	text-align:left;
+	border-spacing:0;
+	width:100%;
+}
+
+.preheader{
+	font-size: 1px; 
+	display: none !important;
+}
+

@@ -1,0 +1,25 @@
+extends _default
+
+block vars
+	-
+		page = {
+			preheader:'home',
+			logo: 'https://city.travel',
+			logoSrc: 'https://city.travel/images/ext/img/logo.png',
+			imgSrc: 'https://city.travel/images/ext/img/password.png',
+			message: ' учётная запись обновлена',
+			appTitle: 'Стартовый шаблон',
+			description: 'Стартовый шаблон для верстки'
+		}
+
+
+block preheader
+	+preheader
+block header
+	+logo
+block message
+	+message
+block content
+	+content
+block footer
+	+footer

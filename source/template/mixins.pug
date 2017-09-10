@@ -1,0 +1,146 @@
+
+//- Preheader
+//--------------------------------
+mixin preheader
+	- props = page.preheader ? true : false; 
+	if props
+		.preheader= page.preheader
+	else if !props
+
+
+
+//- Style Tags
+//--------------------------------
+mixin style-tags
+	style.
+		html {
+			margin:0;
+			padding:0;
+			height:100% !important;
+			margin:0;
+			padding:0;
+			width:100% !important;
+			background:#f6f6f6 !important;
+		}
+		
+		body {
+		  margin:0;
+		  padding:0;
+		  height:100% !important;
+		  margin:0;
+		  padding:0;
+		  width:100% !important;
+		  font-family: 'Open Sans', sans-serif;
+		  background:#f6f6f6 !important;
+		  -webkit-text-size-adjust:100%;
+		  -ms-text-size-adjust:100%;
+		}  
+
+
+//- IE Conditional Comment Opening
+//--------------------------------
+mixin ie-open(props)
+	- props = props || {};
+	- table = props.table ? 'width="' + props.table + '"' : '';
+	- cell = props.cell ? 'width="' + props.cell + '"' : '';
+	|<!--[if (gte mso 9)|(IE)]>
+	|<table cellspacing="0" cellpadding="0" border="0" !{table} align="center">
+	|<tr>
+	|<td valign="top" !{cell}>
+	|<![endif]-->
+
+
+//- IE Conditional Comment Seperator
+//--------------------------------
+mixin ie-col(props)
+	- props = props || {};
+	- cell = props.cell ? 'width="' + props.cell + '"' : '';
+	|<!--[if (gte mso 9)|(IE)]>
+	|</td>
+	|<td valign="top" !{cell}>
+	|<![endif]-->
+
+
+//- IE Conditional Comment Closing Partial
+//--------------------------------
+mixin ie-close(props)
+	- props = props || {};
+	|<!--[if (gte mso 9)|(IE)]>
+	|</td>
+	|</tr>
+	|</table>
+	|<![endif]-->
+
+//- logo
+//--------------------------------
+mixin logo(url, src)
+	- url = page.logo
+	- src = page.logoSrc
+	tr
+		td.header(valign="top")
+			a(href=url)
+				img(src=src)(alt="City.Travel" border="0" width="167" height="45")
+
+//- Message
+//--------------------------------
+mixin message(text)
+	- text = page.message
+	tr
+		td.message(valign="top")= text
+
+//- Img in email
+//--------------------------------
+mixin img-email(src)
+	- src = page.imgSrc
+	center.img-email
+		img(src=src)(alt="Учетная запись обновлена" width="110" height="93")
+
+
+
+//- Content
+//--------------------------------
+mixin content
+	tr
+		td.content(valign="top")
+			+img-email
+			p.content__text Уважаемый пользователь, пароль Вашей учётной запись был успешно обновлен:
+			table(border="0" cellpadding="0" cellspacing="0" width="100%" background="#dae9fa")
+				tr
+					td.content__pass(width="12%")
+						p Пароль:
+					td.content__pass(width="88%")
+						b j4T8Drs7B2
+				tr
+					td(height="20")
+
+
+//- Footer
+//--------------------------------
+mixin footer
+	tr
+		td.footer
+			table.footer__wrapper(border="0" cellpadding="0" cellspacing="0" width="100%")
+				tr
+					td.footer__call(valign="top")
+						b Обратиться в чат-поддержку клиентов:
+						p WhatsApp или Viber: +7 495 640 60 40
+					td.footer__call(valign="top")
+						b Связаться по телефону со cлужбой поддержки:
+						p +7 495 640 60 40, +7 812 640 60 40.
+				tr
+					td(height="20")
+				tr
+					td.footer__call(valign="top")
+						b Присоединяйтесь
+						p
+							a.footer__icon(href="https://www.instagram.com/citytravel/")
+								img(src="https://city.travel/images/ext/img/instagram.png", width="42px" height="42px" alt="Инстаграм")
+							a.footer__icon(href="https://vk.com/citytravel")
+								img(src="https://city.travel/images/ext/img/vk.png", alt="Вконтакте")
+					td.footer__call(valign="top")
+						b Скачайте приложение:
+						p
+							a.footer__icon(href="https://play.google.com/store/apps/details?id=travel.city.android&hl=ru")
+								img(src="https://city.travel/images/ext/img/google-play.png", width="141px" height="42px" alt="Google Play")
+							a.footer__icon(href="https://itunes.apple.com/ru/app/city-travel/id1272214112?mt=8")
+								img(src="https://city.travel/images/ext/img/app-store.png", alt="App Store")

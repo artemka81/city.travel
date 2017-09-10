@@ -1,0 +1,39 @@
+.content{
+	background-color:#ffffff;
+	background-image:none;
+	background-repeat:repeat;
+	background-position:top left;
+	background-attachment:scroll;
+	padding-top:50px;
+	padding-bottom:30px;
+	padding-right:33px;
+	padding-left:33px;
+	line-height:30px;
+	color:#3d3d3d;
+	font-family: 'Open Sans', sans-serif;
+	font-size:16.5px;
+	&__text{
+		margin-top:0;
+		margin-bottom:27px;
+		line-height:1.3;
+		color:#3d3d3d;
+		font-family: 'Open Sans', sans-serif;
+		font-size:16.5px;
+	}
+
+}
+.content__pass{
+		background-color:#dae9fa;
+		padding-top:18px;
+		padding-bottom:18px;
+		padding-right:0px;
+		padding-left:18px;
+		line-height:1.3;
+		color:#3d3d3d;
+		font-family: 'Open Sans', sans-serif;
+		font-size:16.5px;
+	}
+
+.img-email{
+	margin-bottom:36px;
+}
