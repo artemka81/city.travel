@@ -93,7 +93,7 @@ mixin message(text)
 mixin img-email(src)
 	- src = page.imgSrc
 	center.img-email
-		img(src=src)(alt="Учетная запись обновлена" width="110" height="93")
+		img(src=src)(alt="Учетная запись обновлена" width="94" height="94")
 
 
 
@@ -103,13 +103,14 @@ mixin content
 	tr
 		td.content(valign="top")
 			+img-email
-			p.content__text Уважаемый пользователь, пароль Вашей учётной запись был успешно обновлен:
+			p.content__text Благодарим за желание работать с нашей компанией. 
+			p.content__text Для активации Вашего аккаунта и открытия для Вашей компании всех доступов, в том числе возможность оплаты заказов по безналичному или наличному расчету (с корпоративного счета), необходимо подписать агентский договор. В течении рабочего дня, пришлем Вам заполненный агентский договор. 
+			p.content__text С инструкцией по работе с системой и обучающим роликом Вы можете ознакомиться здесь:
 			table(border="0" cellpadding="0" cellspacing="0" width="100%" background="#dae9fa")
 				tr
-					td.content__pass(width="12%")
-						p Пароль:
-					td.content__pass(width="88%")
-						b j4T8Drs7B2
+					td.content__pass
+						a.content__link(href="http://agency.city.travel/instructions.php?utm_source=city_travel&utm_medium=email&utm_campaign=agency" target='_blank') Инструкции по работе с системой city.travel
+
 				tr
 					td(height="20")
 

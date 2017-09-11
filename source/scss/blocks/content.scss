@@ -14,8 +14,8 @@
 	font-size:16.5px;
 	&__text{
 		margin-top:0;
-		margin-bottom:27px;
-		line-height:1.3;
+		margin-bottom:14px;
+		line-height:1.5;
 		color:#3d3d3d;
 		font-family: 'Open Sans', sans-serif;
 		font-size:16.5px;
@@ -33,7 +33,12 @@
 		font-family: 'Open Sans', sans-serif;
 		font-size:16.5px;
 	}
-
+.content__link{
+	color: rgb(51, 102, 153); 
+	font-weight: normal; 
+	font-size: 17px;
+	text-decoration: underline;
+}
 .img-email{
 	margin-bottom:36px;
 }
