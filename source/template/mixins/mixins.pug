@@ -1,0 +1,160 @@
+
+//- Style Tags
+//--------------------------------
+mixin style-tags
+	style.
+		html {
+			margin:0;
+			padding:0;
+			height:100% !important;
+			width:100% !important;
+			background:#E8E8E8 !important;
+		}
+		p{
+			margin:0;
+			padding:0;
+		}
+		
+		body {
+		  margin:0;
+		  padding:0;
+		  height:100% !important;
+		  margin:0;
+		  padding:0;
+		  width:100% !important;
+		  font-family: 'Roboto', sans-serif;
+		  background:#E8E8E8 !important;
+		  -webkit-text-size-adjust:100%;
+		  -ms-text-size-adjust:100%;
+
+		  @media only screen and (max-width: 480px) {
+				-webkit-text-size-adjust:none !important;
+				width:100% !important;
+				min-width:100% !important;
+		  }
+		}  
+
+
+//- IE Conditional Comment Opening
+//--------------------------------
+mixin ie-open(props)
+	- props = props || {};
+	- table = props.table ? 'width="' + props.table + '"' : '';
+	- cell = props.cell ? 'width="' + props.cell + '"' : '';
+	|<!--[if (gte mso 9)|(IE)]>
+	|<table cellspacing="0" cellpadding="0" border="0" !{table} align="center">
+	|<tr>
+	|<td valign="top" !{cell}>
+	|<![endif]-->
+
+
+//- IE Conditional Comment Seperator
+//--------------------------------
+mixin ie-col(props)
+	- props = props || {};
+	- cell = props.cell ? 'width="' + props.cell + '"' : '';
+	|<!--[if (gte mso 9)|(IE)]>
+	|</td>
+	|<td valign="top" !{cell}>
+	|<![endif]-->
+
+
+//- IE Conditional Comment Closing Partial
+//--------------------------------
+mixin ie-close(props)
+	- props = props || {};
+	|<!--[if (gte mso 9)|(IE)]>
+	|</td>
+	|</tr>
+	|</table>
+	|<![endif]-->
+
+//- logo
+//--------------------------------
+mixin logo(url, src)
+	- url = page.logo
+	- src = page.logoSrc
+	tr
+		td.header(valign="top")
+			a(href=url)
+				img(src=src)(alt="City.Travel" border="0" width="167" height="45")
+
+//- Head
+//--------------------------------
+mixin head
+	table.head(cellpadding="0" cellspacing="0" border="0" width="100%" height="240")
+		tr
+			td(align="center")
+				p.head__title Специальные предложения на авиабилеты
+				p.head__subtitle Мы подготовили для вас новые спецпредложения на популярные направления из Москвы
+
+
+
+//- Button
+//--------------------------------
+mixin button(url,text)
+	table.button(cellpadding="0" cellspacing="0" border="0" align="left")
+		tr
+			td.button__wrapper(valign="middle")
+				a(href=url)=text
+
+//- Button--promo
+//--------------------------------
+mixin button-promo(url,text)
+	table.button-promo(cellpadding="0" cellspacing="0" border="0" align="left")
+		tr
+			td.button-promo__wrapper(valign="middle")
+				a(href=url)=text
+
+
+//- Block Yellow
+//--------------------------------
+mixin yellow-block
+	table.yellow(cellpadding="0" cellspacing="0" border="0" width="100%")
+		tr
+			td.yellow__wrapper(valign="top" bgcolor="#EFB650")
+				p.h1 Летай по самым низким ценам
+				p.desc Поиск самых дешевых билетов за счет уникального алгоритма поиска. Наибольшая база вариантов перелетов, стыковок и комбинаций рейсов.
+				br
+				+button("https://new.city.travel","сравнить цену")
+
+//- Block White
+//--------------------------------
+mixin white-block
+	table.white(cellpadding="0" cellspacing="0" border="0" width="100%")
+		tr
+			td.white__wrapper(valign="top" bgcolor="#ffffff")
+				p.h1 Еще не определились?
+				p.desc Мы подобрал для Вас популярные направления по самым низким ценам на весь год. Вам просто осталось выбрать направление и купить авиабилеты
+				br
+				+button("https://new.city.travel","узнать цену")
+
+//- Block Grey
+//--------------------------------
+mixin grey-block
+	table.grey(cellpadding="0" cellspacing="0" border="0" width="100%")
+		tr
+			td.grey__wrapper(valign="top" bgcolor="#F2F2F2")
+				p.h1 Скачай мобильное приложение City.Travel
+				p.desc Проще не бывает! Просто используйте поиск, сравнивайте цены и бронируйте - где бы Вы ни находились!
+				br
+				+button("https://new.city.travel","загрузить приложение")
+
+//- Promo offers
+//--------------------------------
+mixin promo-offers
+	table.promo(cellpadding="0" cellspacing="0" border="0" width="100%")
+		tr
+			td.promo__wrapper 
+				table(cellpadding="20" cellspacing="0" width="100%")
+					tr
+						td.promo__title Популярные направления из Москвы
+				table(cellpadding="0" cellspacing="0" width="100%")
+					tr
+						td.promo__city Миниральные воды
+						td(width="200")
+							a.promo__price(href="#") от 7197 рублей
+							p.promo__direction билет в одну сторону
+						td(width="140")
+							+button-promo("https://city.travel", "выбрать даты")
+

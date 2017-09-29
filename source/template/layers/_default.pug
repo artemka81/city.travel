@@ -1,0 +1,21 @@
+include ../mixins/header
+include ../mixins/mixins
+
+doctype html
+//- Global variables
+block vars
+//- Template
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(content="telephone=no" name="format-detection")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,500&amp;subset=cyrillic" rel="stylesheet")
+		link(rel="stylesheet" href="main.css")
+		title Шаблон письма
+		+style-tags
+	body
+		block header
+		block content
+		block footer
+			
+	

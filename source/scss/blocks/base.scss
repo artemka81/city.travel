@@ -6,23 +6,14 @@ center {
 	-ms-text-size-adjust:none;
 }
 
-.w640{
-	max-width:640px; 
-	margin: 0 auto;
+.h1{
+	font-weight: 500;
+	font-size: 24px;
+	color:$h1-color;
+	margin-bottom: 16px;
 }
-
-.wrapper{
-	color:#3d3d3d;
-	font-size:16px;
-	line-height:19px;
-	font-family: 'Open Sans', sans-serif;
-	text-align:left;
-	border-spacing:0;
-	width:100%;
-}
-
-.preheader{
-	font-size: 1px; 
-	display: none !important;
+.desc{
+	font-weight: 300;
+	font-size: 18px;
 }
 

@@ -1,0 +1,56 @@
+
+
+ 
+{ "products" : [
+        {
+          "-id": "MOW-AER/3010",
+          "name": "Москва - Сочи",
+          "bigimage": "http://static.city.travel/spec/585/AER.jpg",
+          "producturl": "https://new.city.travel/avia/search/MOW/AER/E/30.10.2017/0/1-0-0/0/0/0/?utm_source=criteo&utm_medium=cpc&utm_campaign=MOW-AER&partner=feed",
+          "description": "билет в одну сторону от 2057",
+          "price": "2057",
+          "retailprice": "2057",
+          "discount": "0",
+          "categoryid1": "Авиабилеты",
+          "instock": "1"
+        },
+        {
+          "-id": "MOW-AER/0711",
+          "name": "Москва - Сочи",
+          "bigimage": "http://static.city.travel/spec/585/AER.jpg",
+          "producturl": "https://new.city.travel/avia/search/MOW/AER/E/07.11.2017/0/1-0-0/0/0/0/?utm_source=criteo&utm_medium=cpc&utm_campaign=MOW-AER&partner=feed",
+          "description": "билет в одну сторону от 2057",
+          "price": "2057",
+          "retailprice": "2057",
+          "discount": "0",
+          "categoryid1": "Авиабилеты",
+          "instock": "1"
+        },
+        {
+          "-id": "MOW-AER/0811",
+          "name": "Москва - Сочи",
+          "bigimage": "http://static.city.travel/spec/585/AER.jpg",
+          "producturl": "https://new.city.travel/avia/search/MOW/AER/E/08.11.2017/0/1-0-0/0/0/0/?utm_source=criteo&utm_medium=cpc&utm_campaign=MOW-AER&partner=feed",
+          "description": "билет в одну сторону от 2057",
+          "price": "2057",
+          "retailprice": "2057",
+          "discount": "0",
+          "categoryid1": "Авиабилеты",
+          "instock": "1"
+        },
+        {
+          "-id": "MOW-AER/1011",
+          "name": "Москва - Сочи",
+          "bigimage": "http://static.city.travel/spec/585/AER.jpg",
+          "producturl": "https://new.city.travel/avia/search/MOW/AER/E/10.11.2017/0/1-0-0/0/0/0/?utm_source=criteo&utm_medium=cpc&utm_campaign=MOW-AER&partner=feed",
+          "description": "билет в одну сторону от 2057",
+          "price": "2057",
+          "retailprice": "2057",
+          "discount": "0",
+          "categoryid1": "Авиабилеты",
+          "instock": "1"
+        }
+      ]
+}
+
+ 
