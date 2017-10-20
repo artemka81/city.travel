@@ -1,6 +1,11 @@
-$preheader-bgcolor: #5B9AE4;
-$preheader-color: $preheader-bgcolor;
-$h1-color:#252B33;
-$desc-color: $h1-color;
-$button-bg:#5b9ae4;
-$yellow-bg:#EFB650;
+/* Base var */
+$base-font:'Roboto', sans-serif;
+
+/* Header */
+$header-bg: #5B9AE4;
+
+/* Block-yellow */
+$bg-yellow: #EFB650;
+
+/* Button */
+$bg-button:$header-bg;

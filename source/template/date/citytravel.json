@@ -1,39 +1,10 @@
-{
-  "site": {
-      "title": "Our Awesome Website",
-      "author": "Tushar Ghate",
-      "meta": {
-          "charset": "utf8",
-          "description": "Lorem ipsum dolor sit amit.",
-          "keywords": "lorem, ipsum, dolor, sit, amit",
-          "favicon": "favicon.ico"
-      }
-  },
-
-  "nav": {
-      "links": [
-          {
-              "href": "/link1",
-              "displayName": "Link 1"
-          },
-
-          {
-              "href": "/link2",
-              "displayName": "Link 2"
-          },
-
-          {
-              "href": "/link3",
-              "displayName": "Link 3"
-          }
-      ]
-  },
-
+{ 
   "products": {
       "product": [
           {
               "flyIn": "Москва",
               "flyOut":"Санкт-Петербург",
+              "flyOutCountry":"Россия",
               "price": 2617,
               "url": "https://new.city.travel/to/city/LED/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/LED.jpg"
@@ -41,6 +12,7 @@
           {
               "flyIn": "Москва",
               "flyOut":"Сочи",
+              "flyOutCountry":"Россия",
               "price": 2295,
               "url": "https://new.city.travel/to/city/AER/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/AER.jpg"
@@ -48,6 +20,7 @@
           {
               "flyIn": "Санкт-Петербург",
               "flyOut":"Симферополь",
+              "flyOutCountry":"Россия",
               "price": 3278,
               "url": "https://new.city.travel/to/city/SIP/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -55,6 +28,7 @@
           {
               "flyIn": "Сочи",
               "flyOut":"Бангкок",
+              "flyOutCountry":"Таиланд",
               "price": 14077,
               "url": "https://new.city.travel/to/city/BKK/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -62,6 +36,7 @@
           {
               "flyIn": "Екатеринбург",
               "flyOut":"Пхукет",
+              "flyOutCountry":"Таиланд",
               "price": 16358,
               "url": "https://new.city.travel/to/city/HKT/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -69,6 +44,7 @@
           {
               "flyIn": "Москва",
               "flyOut":"Анталия",
+              "flyOutCountry":"Турция",
               "price": 7049,
               "url": "https://new.city.travel/to/city/AYT/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -76,6 +52,7 @@
           {
               "flyIn": "Москва",
               "flyOut":"Прага",
+              "flyOutCountry":"Чехия",
               "price": 4506,
               "url": "https://new.city.travel/to/city/PRG/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -83,6 +60,7 @@
           {
               "flyIn": "Нижний Новгород",
               "flyOut":"Тиват",
+              "flyOutCountry":"Черногория",
               "price": 7348,
               "url": "https://new.city.travel/to/city/TIV/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
@@ -90,18 +68,12 @@
           {
               "flyIn": "Москва",
               "flyOut":"Барселона",
+              "flyOutCountry":"Испания",
               "price": 4815,
               "url": "https://new.city.travel/to/city/BCN/OW/0/0/0?from=MOW",
               "img":"https://static.city.travel/spec/275/SIP.jpg"
           }
 
       ]
-  },
-
-  "promo": {
-      "Москва": {
-          "href": "https://new.city.travel/to/catalog/?from=MOW",
-          "fr-CA": "Bonjour le monde"
-      }
   }
 }

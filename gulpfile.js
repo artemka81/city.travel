@@ -22,10 +22,10 @@ gulp.task('server', function() {
 
 /*------ PUG--------*/
 gulp.task('pug', function buildHTML() {
-  return gulp.src('source/template/index.pug')
+  return gulp.src('source/template/*.pug')
     .pipe(data( function(file) {
       return JSON.parse(
-                    fs.readFileSync('source/template/date/test.json')
+                    fs.readFileSync('source/template/date/citytravel.json')
                   );
                 } ))
     .pipe(pug({
@@ -50,13 +50,13 @@ gulp.task('copy', function(){
 
 /*------ Inline -------*/
 gulp.task('inline', function() {
-    return gulp.src('build/index.html')
-        .pipe(smoosher())
+    return gulp.src('build/msk.html')
+
         .pipe(inlineCss({
             	applyStyleTags: true,
             	applyLinkTags: true,
-            	removeStyleTags: true,
-            	removeLinkTags: true
+            	removeStyleTags: false,
+            	removeLinkTags: false
         }))
         .pipe(rename({
         	suffix: "-inline"
@@ -64,17 +64,21 @@ gulp.task('inline', function() {
         .pipe(gulp.dest('build/'));
 });
 
+
+
+
+
 /*------ Watch -------*/
 gulp.task('watch', function(){
 	gulp.watch('source/template/**/*.pug', gulp.series('pug'));
 	gulp.watch('source/scss/**/*.scss', gulp.series('scss'));
   gulp.watch('source/img/*.*', gulp.series('copy'));
-  /*gulp.watch('build/index.html', gulp.series('inline'));*/
+  gulp.watch('build/index.html', gulp.series('inline'));
 });
 
 /*------ Default -------*/
 gulp.task('default', gulp.series(
-	gulp.parallel('pug', 'scss', 'copy'),
+	gulp.parallel('pug', 'scss', 'copy', 'inline'),
 	gulp.parallel('watch', 'server')
 
 	)

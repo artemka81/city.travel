@@ -1,21 +1,28 @@
 include ../mixins/header
 include ../mixins/mixins
+include ../mixins/style-tags
+include ../mixins/outlook-css
+include ../mixins/content
+include ../mixins/footer
 
-doctype html
+
+doctype transitional
 //- Global variables
 block vars
 //- Template
 html(lang='ru')
 	head
-		meta(charset='UTF-8')
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
 		meta(content="telephone=no" name="format-detection")
-		link(href="https://fonts.googleapis.com/css?family=Roboto:300,500&amp;subset=cyrillic" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,500&amp;subset=cyrillic" rel="stylesheet" type="text/css")
 		link(rel="stylesheet" href="main.css")
 		title Шаблон письма
 		+style-tags
 	body
-		block header
-		block content
-		block footer
+		table(cellspacing="0" cellpadding="0" border="0" width="100%")
+			block header				
+			block content
+			block footer
+
 			
 	

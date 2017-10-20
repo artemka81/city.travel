@@ -1,13 +1,14 @@
+
+.header{
+	background:$header-bg;
+}
 .preheader{
-	font-size:1px;
-	color: $preheader-color;
-	background-color:$preheader-bgcolor;
+	color: $header-bg; 
+	font-size: 1px; 
+	height: 20px;
 }
 
-.view, .view-link{
-	font-size: 12px;
-	font-weight: 300;
+.link{
 	color:white;
+	font-family: $base-font;
 }
-
-
